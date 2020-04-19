@@ -1,0 +1,32 @@
+<resources>
+    <string name="app_name">Demo</string>
+
+    <string name="activity_main_title">
+        Добро пожаловать\n
+        в Харьков
+    </string>
+
+    <string name="activity_main_text">
+    Приложение для связи жителей города\n
+    с администрацией для улучшения их\n
+    жизни в городе
+    </string>
+
+    <string name="activity_main_email_Hint">Email</string>
+
+    <string name="activity_main_password_Hint">Password</string>
+
+    <string name="activity_main_remind">Напомнить пароль?</string>
+
+    <string name="activity_main_btn_auth">Авторизация</string>
+
+    <string name="activity_main_btn_auth_fb">Continue with Facebook</string>
+
+    <string name="activity_main_btn_entity">Продолжить без авторизации</string>
+
+    <string name="activity_main_btn_reg">Ещё нет аккаунта? Создать сейчас</string>
+
+    <string name="activity_main_content_description">Кнопка</string>
+
+
+</resources>
