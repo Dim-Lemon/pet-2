@@ -87,16 +87,14 @@ public class NewsActivity extends AppCompatActivity {
     //метод для реализации на нажатие свежее/горячеее
     private void Select_btn(TextView select_btn_news){
         if (select_btn_news == btn_fresh_news) {
-            //нажате на свежее
-            fresh_select_line.setBackgroundColor(Color.parseColor("#ED1E3C"));
-            hot_select_line.setBackgroundColor(Color.parseColor("#FFFFFF"));
+            fresh_select_line.setVisibility(View.VISIBLE);
+            hot_select_line.setVisibility(View.INVISIBLE);
             btn_fresh_news.setTypeface(null, Typeface.BOLD);
             btn_hot_news.setTypeface(null, Typeface.NORMAL);
         }
         else {
-            //нажатие на горячее
-            fresh_select_line.setBackgroundColor(Color.parseColor("#FFFFFF"));
-            hot_select_line.setBackgroundColor(Color.parseColor("#ED1E3C"));
+            fresh_select_line.setVisibility(View.INVISIBLE);
+            hot_select_line.setVisibility(View.VISIBLE);
             btn_fresh_news.setTypeface(null, Typeface.NORMAL);
             btn_hot_news.setTypeface(null, Typeface.BOLD);
         }
