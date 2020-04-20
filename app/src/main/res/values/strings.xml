@@ -1,6 +1,8 @@
 <resources>
     <string name="app_name">Demo</string>
 
+    <!-- Авторизация -->
+
     <string name="activity_main_title">
         Добро пожаловать\n
         в Харьков
@@ -27,6 +29,24 @@
     <string name="activity_main_btn_reg">Ещё нет аккаунта? Создать сейчас</string>
 
     <string name="activity_main_content_description">Кнопка</string>
+
+    <!-- Новости -->
+    <string name="activity_news_news_map_description">Иконка карты</string>
+
+    <string name="activity_news_menu_description">Иконка меню</string>
+
+    <string name="activity_news_news_text_view">Новости</string>
+
+    <string name="activity_news_frash_text_view">Свежее</string>
+
+    <string name="activity_news_hot_text_view">Горячее</string>
+
+    <!-- Фрагмент свежих новостей -->
+    <string name="fresh_news_list_item_image_description">Изображение</string>
+
+    <string name="fresh_news_list_item_news_date">16 апреля 2020 г</string>
+
+    <string name="fresh_news_list_item_news_text">В Харькове возле Благовещенского соб...</string>
 
 
 </resources>
