@@ -44,7 +44,7 @@
     <!-- Фрагмент свежих новостей -->
     <string name="fresh_news_list_item_image_description">Изображение</string>
 
-    <string name="fresh_news_list_item_news_date">16 апреля 2020 г</string>
+    <string name="fresh_news_list_item_news_date">16 апреля 2020 г (свежее)</string>
 
     <string name="fresh_news_list_item_news_text">В Харькове возле Благовещенского соб...</string>
 

@@ -9,6 +9,11 @@ import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
 
+/*
+Фрагмент для новостей на activity_news
+*/
+
+
 public class FreshNewsFragment extends Fragment {
 
     private NumbersAdapter numbersAdapter;
@@ -31,8 +36,6 @@ public class FreshNewsFragment extends Fragment {
         //адаптер для recyclerView
         numbersAdapter = new NumbersAdapter(10);
         recyclerView.setAdapter(numbersAdapter);
-
-
 
         //конец
         return view;

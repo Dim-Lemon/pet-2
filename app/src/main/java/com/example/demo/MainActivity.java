@@ -30,34 +30,35 @@ public class MainActivity extends AppCompatActivity {
     //нажатие на клавишу забыл пароль
     //1. Нажатие на кнопку работает
     public void OnClick_bth_remind(View v){
-        title.setText("Работает кнопка забыл");
+
     }
 
     //нажатие на клавишу авторизация
     //1. Нажатие на кнопку работает
-    //2. ****Реализовать переход на activity_news
+    //2. ***Реализовать переход на activity_news в соответсвии с ТЗ
+    // Реализован переход на activity_news
     public void OnClick_bth_aut(View v){
-        title.setText("Работает кнопка авторизации");
         Intent intent = new Intent("com.example.demo.NewsActivity");
         startActivity(intent);
     }
     //нажатие на клавишу авторизация через фб
     //1. Нажатие на кнопку работает
-    //2. ***Реализовать переход на activity_news
+    //2. ***Реализовать переход на activity_news в соответсвии с ТЗ
     public void OnClick_bth_fb_auth(View v){
-        title.setText("Работает кнопка fb авторизации");
+
     }
     //нажатие на клавишу анонимный вход
     //1. Нажатие на кнопку работает
-    //2. ***Реализовать переход на activity_news
+    //2. ***Реализовать переход на activity_news в соответсвии с ТЗ
     public void OnClick_bth_entity(View v){
-        title.setText("Работает кнопка входа");
+
     }
 
     //нажатие на клавишу регистрация
     //1. Нажатие на кнопку работает
+    //2. ***Реализовать регистрацию в соотвесвии с ТЗ
     public void OnClick_bth_reg(View v){
-        title.setText("Работает кнопка регистрации");
+
     }
 
 

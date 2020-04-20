@@ -4,23 +4,40 @@
 <androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/activity_news_constraint_layout"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     android:background="#FFFFFF">
 
 
     <ImageView
-        android:id="@+id/menu_news"
+        android:id="@+id/btn_menu_news"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_marginStart="340dp"
         android:layout_marginTop="26dp"
         android:layout_marginEnd="5dp"
         android:contentDescription="@string/activity_news_news_map_description"
+        android:onClick="OnClick_btn_menu_news"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent"
         app:srcCompat="@drawable/menu_ic" />
+
+    <ImageView
+        android:id="@+id/btn_map_news"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="28dp"
+        android:layout_marginTop="26dp"
+        android:layout_marginEnd="330dp"
+        android:contentDescription="@string/activity_news_news_map_description"
+        android:onClick="OnClick_btn_map_news"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.041"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:srcCompat="@drawable/map_ic" />
 
     <TextView
         android:id="@+id/news_text_view"
@@ -37,21 +54,7 @@
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintHorizontal_bias="0.094"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/map_news" />
-
-    <ImageView
-        android:id="@+id/map_news"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_marginStart="28dp"
-        android:layout_marginTop="26dp"
-        android:layout_marginEnd="330dp"
-        android:contentDescription="@string/activity_news_news_map_description"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.041"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="parent"
-        app:srcCompat="@drawable/map_ic" />
+        app:layout_constraintTop_toBottomOf="@+id/btn_map_news" />
 
     <View
         android:id="@+id/borderline"
@@ -67,13 +70,14 @@
         app:layout_constraintTop_toBottomOf="@+id/news_text_view" />
 
     <TextView
-        android:id="@+id/frash_text_view"
+        android:id="@+id/btn_fresh_news"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_marginStart="108dp"
         android:layout_marginTop="15dp"
         android:layout_marginEnd="208dp"
         android:fontFamily="@font/montserrat"
+        android:onClick="OnClick_btn_fresh_news"
         android:text="@string/activity_news_frash_text_view"
         android:textColor="#000000"
         android:textStyle="bold"
@@ -83,13 +87,14 @@
         app:layout_constraintTop_toBottomOf="@+id/borderline" />
 
     <TextView
-        android:id="@+id/hot_text_view"
+        android:id="@+id/btn_hot_news"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_marginStart="229dp"
         android:layout_marginTop="15dp"
         android:layout_marginEnd="87dp"
         android:fontFamily="@font/montserrat"
+        android:onClick="OnClick_btn_hot_news"
         android:text="@string/activity_news_hot_text_view"
         android:textColor="#000000"
         app:layout_constraintEnd_toEndOf="parent"
@@ -98,7 +103,7 @@
         app:layout_constraintTop_toBottomOf="@+id/borderline" />
 
     <View
-        android:id="@+id/select_line"
+        android:id="@+id/fresh_select_line"
         android:layout_width="40dp"
         android:layout_height="1dp"
         android:layout_marginStart="99dp"
@@ -107,18 +112,30 @@
         android:background="#ED1E3C"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/frash_text_view" />
+        app:layout_constraintTop_toBottomOf="@+id/btn_fresh_news" />
+
+    <View
+        android:id="@+id/hot_select_line"
+        android:layout_width="40dp"
+        android:layout_height="1dp"
+        android:layout_marginStart="218dp"
+        android:layout_marginTop="10dp"
+        android:layout_marginEnd="92dp"
+        android:background="#FFFFFF"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/btn_fresh_news" />
 
     <fragment
-        android:id="@+id/fragment_fresh_news"
+        android:id="@+id/fragment_news"
         android:name="com.example.demo.FreshNewsFragment"
         android:layout_width="0dp"
         android:layout_height="0dp"
         android:layout_marginStart="15dp"
-        android:layout_marginTop="16dp"
+        android:layout_marginTop="70dp"
         android:layout_marginEnd="15dp"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/select_line" />
+        app:layout_constraintTop_toBottomOf="@+id/borderline" />
 </androidx.constraintlayout.widget.ConstraintLayout>
