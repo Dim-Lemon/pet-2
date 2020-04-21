@@ -1,45 +1,64 @@
 package com.example.demo;
 
 import androidx.appcompat.app.AppCompatActivity;
+import androidx.databinding.DataBindingUtil;
 
 import android.content.Intent;
 import android.os.Bundle;
 import android.view.View;
 import android.widget.TextView;
 
+import com.example.demo.databinding.ActivityMainBinding;
 
 public class MainActivity extends AppCompatActivity {
 
     private TextView title;
 
+    private ActivityMainBinding binding;
+
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
-        setContentView(R.layout.activity_main);
-        title = (TextView)findViewById(R.id.title);
+        binding = DataBindingUtil.setContentView(this, R.layout.activity_main);
 
-
-
+        initBinding();
 
     }
 
+
+    private void initBinding(){
+        onClickBtnAuthMain();
+    }
 
 
 
     //нажатие на клавишу забыл пароль
     //1. Нажатие на кнопку работает
-    public void OnClick_bth_remind(View v){
-
+    //2. Реализован переход на activity_news
+    // *** Реализовать по ТЗ
+    public void onClickBtnAuthMain(){
+        binding.btnAuthMain.setOnClickListener(view -> openActivityNews());
     }
 
-    //нажатие на клавишу авторизация
-    //1. Нажатие на кнопку работает
-    //2. ***Реализовать переход на activity_news в соответсвии с ТЗ
-    // Реализован переход на activity_news
-    public void OnClick_bth_aut(View v){
-        Intent intent = new Intent("com.example.demo.NewsActivity");
+    //Метод для перехода на новостную ленту
+    private void openActivityNews(){
+        Intent intent = new Intent(this, NewsActivity.class);
         startActivity(intent);
+    }
+
+
+
+
+
+
+
+
+
+
+    /*
+
+
     }
     //нажатие на клавишу авторизация через фб
     //1. Нажатие на кнопку работает
@@ -62,7 +81,7 @@ public class MainActivity extends AppCompatActivity {
     }
 
 
-
+*/
 
 
 }

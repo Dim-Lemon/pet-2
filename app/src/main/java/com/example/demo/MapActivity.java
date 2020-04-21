@@ -34,8 +34,7 @@ public class MapActivity extends AppCompatActivity implements OnMapReadyCallback
 
     public void OnClickBtnBackMap(View v){
         //реакция на нажатие кнопки Горячее
-        Intent intent = new Intent("com.example.demo.NewsActivity");
-        startActivity(intent);
+        startActivity(new Intent(this, NewsActivity.class));
     }
 
 

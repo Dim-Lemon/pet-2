@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="utf-8"?>
-
+<layout>
 
 <androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:app="http://schemas.android.com/apk/res-auto"
@@ -40,7 +40,7 @@
         app:srcCompat="@drawable/map_ic" />
 
     <TextView
-        android:id="@+id/news_text_view"
+        android:id="@+id/title_news"
         android:layout_width="0dp"
         android:layout_height="wrap_content"
         android:layout_marginStart="15dp"
@@ -57,7 +57,7 @@
         app:layout_constraintTop_toBottomOf="@+id/btn_map_news" />
 
     <View
-        android:id="@+id/borderline"
+        android:id="@+id/borderline_news"
         android:layout_width="345dp"
         android:layout_height="1dp"
         android:layout_marginStart="15dp"
@@ -65,9 +65,8 @@
         android:layout_marginEnd="15dp"
         android:background="#76535353"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.494"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/news_text_view" />
+        app:layout_constraintTop_toBottomOf="@+id/title_news" />
 
     <TextView
         android:id="@+id/btn_fresh_news"
@@ -84,7 +83,7 @@
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintHorizontal_bias="0.268"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/borderline" />
+        app:layout_constraintTop_toBottomOf="@+id/borderline_news" />
 
     <TextView
         android:id="@+id/btn_hot_news"
@@ -100,10 +99,10 @@
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintHorizontal_bias="0.268"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/borderline" />
+        app:layout_constraintTop_toBottomOf="@+id/borderline_news" />
 
     <View
-        android:id="@+id/fresh_select_line"
+        android:id="@+id/fresh_select_line_news"
         android:layout_width="40dp"
         android:layout_height="1dp"
         android:layout_marginStart="99dp"
@@ -115,7 +114,7 @@
         app:layout_constraintTop_toBottomOf="@+id/btn_fresh_news" />
 
     <View
-        android:id="@+id/hot_select_line"
+        android:id="@+id/hot_select_line_news"
         android:layout_width="40dp"
         android:layout_height="1dp"
         android:layout_marginStart="218dp"
@@ -138,5 +137,6 @@
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/borderline" />
+        app:layout_constraintTop_toBottomOf="@+id/borderline_news" />
 </androidx.constraintlayout.widget.ConstraintLayout>
+</layout>
