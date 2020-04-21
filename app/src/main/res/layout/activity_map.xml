@@ -1,4 +1,6 @@
 <?xml version="1.0" encoding="utf-8"?>
+
+<layout>
 <androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
@@ -48,7 +50,7 @@
         app:srcCompat="@drawable/map_ic" />
 
     <TextView
-        android:id="@+id/map_title_map"
+        android:id="@+id/title_map"
         android:layout_width="0dp"
         android:layout_height="wrap_content"
         android:layout_marginStart="15dp"
@@ -65,7 +67,7 @@
         app:layout_constraintTop_toBottomOf="@+id/btn_map_map" />
 
     <View
-        android:id="@+id/borderline"
+        android:id="@+id/borderline_map"
         android:layout_width="345dp"
         android:layout_height="1dp"
         android:layout_marginStart="15dp"
@@ -75,10 +77,10 @@
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintHorizontal_bias="0.494"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/map_title_map" />
+        app:layout_constraintTop_toBottomOf="@+id/title_map" />
 
     <EditText
-        android:id="@+id/streat_view"
+        android:id="@+id/street_view"
         android:layout_width="0dp"
         android:layout_height="wrap_content"
         android:layout_marginStart="25dp"
@@ -98,7 +100,7 @@
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintHorizontal_bias="0.337"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/borderline" />
+        app:layout_constraintTop_toBottomOf="@+id/borderline_map" />
 
     <fragment
         android:id="@+id/map"
@@ -109,8 +111,9 @@
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/streat_view"
+        app:layout_constraintTop_toBottomOf="@+id/street_view"
         tools:context=".MapActivity" />
 
 
 </androidx.constraintlayout.widget.ConstraintLayout>
+</layout>

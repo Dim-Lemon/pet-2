@@ -14,16 +14,8 @@ import com.example.demo.databinding.ActivityNewsBinding;
 
 
 public class NewsActivity extends AppCompatActivity {
-    //Заголовок НОВОСТЬ, кнопка свежее, кнопка горячее
-    private TextView news_text_view, btn_fresh_news, btn_hot_news;
 
-    //линии под кнопкой свежее, горячее
-    private View fresh_select_line, hot_select_line;
-
-
-    //todo new
     private ActivityNewsBinding binding;
-
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -32,43 +24,34 @@ public class NewsActivity extends AppCompatActivity {
         //todo new
         binding = DataBindingUtil.setContentView(this, R.layout.activity_news);
 
-        init();
+        initBinding();
 
     }
 
-    //todo new
-    private void init() {
-        setOnClick();
+    //****Основные методы****//
+
+    private void initBinding() {
+        setOnClickBtnMapNews();
+        setOnClickBtnMenuNews();
+        setOnClickBtnFreshNews();
+        setOnClickBtnHotNews();
     }
 
-    //todo new
-    private void setOnClick() {
-        binding.btnMapNews.setOnClickListener(view -> openMapActivity());
-    }
 
 
     //нажатие на иконку карты
     //1. Нажатие на иконку работает
-    //2.
+    //2. Реализован переход на activity_map
     // ***Реализовать в соотвесви с ТЗ
-    public void OnClick_btn_menu_news(View v) {
-
-
-    }
-
-    private void openMapActivity() {
-
+    private void setOnClickBtnMapNews() {
+        binding.btnMapNews.setOnClickListener(view -> openMapActivity());
     }
 
     //нажатие на иконку меню
-    //1. Нажатие на иконку работает
-    //2. ***Реализовать в соотвесви с ТЗ
-    public void OnClick_btn_map_news(View v) {
-        /*
-        Intent intent = new Intent("com.example.demo.MapActivity");
-        startActivity(intent);
-
-         */
+    //1.
+    //2.
+    // ***Реализовать в соотвесви с ТЗ
+    private void setOnClickBtnMenuNews() {
 
     }
 
@@ -76,41 +59,49 @@ public class NewsActivity extends AppCompatActivity {
     //1. Нажатие на кнопку работает
     //2. Реализована реакция на выбор кнопки свежее / горячее
     // ***Реализовать в соотвесви с ТЗ
-    public void OnClick_btn_fresh_news(View v) {
-        //реакция на нажатие кнопки Свежее
-        Select_btn(btn_fresh_news);
-
+    private void setOnClickBtnFreshNews(){
+        binding.btnFreshNews.setOnClickListener(v -> Select_btn(true));
     }
 
     //нажатие на кнопку горячее
     //1. Нажатие на кнопку работает
     //2. Реализована реакция на выбор кнопки свежее / горячее
     // ***Реализовать в соотвесви с ТЗ
-
-    public void OnClick_btn_hot_news(View v) {
-        //реакция на нажатие кнопки Горячее
-        Select_btn(btn_hot_news);
-
+    private void setOnClickBtnHotNews(){
+        binding.btnHotNews.setOnClickListener(v -> Select_btn(false));
     }
+
+
+
+
+    //***Вспомогательные методы***//
 
     //метод для реализации на нажатие свежее/горячеее
-    private void Select_btn(TextView select_btn_news) {
-        if (select_btn_news == btn_fresh_news) {
+    private void Select_btn(boolean select_btn) {
+        if (select_btn) {
             //нажате на свежее
-            fresh_select_line.setBackgroundColor(Color.parseColor("#ED1E3C"));
-            hot_select_line.setBackgroundColor(Color.parseColor("#FFFFFF"));
-            btn_fresh_news.setTypeface(null, Typeface.BOLD);
-            btn_hot_news.setTypeface(null, Typeface.NORMAL);
+
+            binding.freshSelectLineNews.setVisibility(View.VISIBLE);
+            binding.hotSelectLineNews.setVisibility(View.INVISIBLE);
+            binding.btnFreshNews.setTypeface(null, Typeface.BOLD);
+            binding.btnHotNews.setTypeface(null, Typeface.NORMAL);
+
         } else {
             //нажатие на горячее
-            fresh_select_line.setBackgroundColor(Color.parseColor("#FFFFFF"));
-            hot_select_line.setBackgroundColor(Color.parseColor("#ED1E3C"));
-            btn_fresh_news.setTypeface(null, Typeface.NORMAL);
-            btn_hot_news.setTypeface(null, Typeface.BOLD);
-        }
 
+            binding.freshSelectLineNews.setVisibility(View.INVISIBLE);
+            binding.hotSelectLineNews.setVisibility(View.VISIBLE);
+            binding.btnFreshNews.setTypeface(null, Typeface.NORMAL);
+            binding.btnHotNews.setTypeface(null, Typeface.BOLD);
+
+        }
     }
 
+    //метод перехода на активти карты
+    private void openMapActivity() {
+        Intent intent = new Intent(this, MapActivity.class);
+        startActivity(intent);
+    }
 
 //НЕ ТРОГАТЬ
 }
