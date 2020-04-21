@@ -31,45 +31,33 @@ public class NewsActivity extends AppCompatActivity {
     //****Основные методы****//
 
     private void initBinding() {
-        setOnClickBtnMapNews();
-        setOnClickBtnMenuNews();
-        setOnClickBtnFreshNews();
-        setOnClickBtnHotNews();
-    }
-
-
-
-    //нажатие на иконку карты
-    //1. Нажатие на иконку работает
-    //2. Реализован переход на activity_map
-    // ***Реализовать в соотвесви с ТЗ
-    private void setOnClickBtnMapNews() {
+        //нажатие на иконку карты
+        //1. Нажатие на иконку работает
+        //2. Реализован переход на activity_map
+        // ***Реализовать в соотвесви с ТЗ
         binding.btnMapNews.setOnClickListener(view -> openMapActivity());
-    }
 
-    //нажатие на иконку меню
-    //1.
-    //2.
-    // ***Реализовать в соотвесви с ТЗ
-    private void setOnClickBtnMenuNews() {
+        //нажатие на иконку меню
+        //1.
+        //2.
+        // ***Реализовать в соотвесви с ТЗ
+        //
 
-    }
-
-    //нажатие на кнопку свежее
-    //1. Нажатие на кнопку работает
-    //2. Реализована реакция на выбор кнопки свежее / горячее
-    // ***Реализовать в соотвесви с ТЗ
-    private void setOnClickBtnFreshNews(){
+        //нажатие на кнопку свежее
+        //1. Нажатие на кнопку работает
+        //2. Реализована реакция на выбор кнопки свежее / горячее
+        // ***Реализовать в соотвесви с ТЗ
         binding.btnFreshNews.setOnClickListener(v -> Select_btn(true));
+
+        //нажатие на кнопку горячее
+        //1. Нажатие на кнопку работает
+        //2. Реализована реакция на выбор кнопки свежее / горячее
+        // ***Реализовать в соотвесви с ТЗ
+        binding.btnHotNews.setOnClickListener(v -> Select_btn(false));
+
     }
 
-    //нажатие на кнопку горячее
-    //1. Нажатие на кнопку работает
-    //2. Реализована реакция на выбор кнопки свежее / горячее
-    // ***Реализовать в соотвесви с ТЗ
-    private void setOnClickBtnHotNews(){
-        binding.btnHotNews.setOnClickListener(v -> Select_btn(false));
-    }
+
 
 
 

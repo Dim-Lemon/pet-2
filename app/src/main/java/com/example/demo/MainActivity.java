@@ -29,16 +29,15 @@ public class MainActivity extends AppCompatActivity {
     //****Основные методы****//
 
     private void initBinding(){
-        setClickBtnAuthMain();
-    }
-
-    //нажатие на клавишу забыл пароль
-    //1. Нажатие на кнопку работает
-    //2. Реализован переход на activity_news
-    // *** Реализовать по ТЗ
-    private void setClickBtnAuthMain(){
+        //нажатие на клавишу забыл пароль
+        //1. Нажатие на кнопку работает
+        //2. Реализован переход на activity_news
+        // *** Реализовать по ТЗ
         binding.btnAuthMain.setOnClickListener(view -> openActivityNews());
     }
+
+
+
 
     //Метод для перехода на новостную ленту
     private void openActivityNews(){

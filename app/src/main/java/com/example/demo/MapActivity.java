@@ -35,17 +35,14 @@ public class MapActivity extends AppCompatActivity implements OnMapReadyCallback
     //****Основные методы****//
 
     public void initBinding(){
-        onClickBtnBackMap();
-
-    }
-
-    //нажатие на кнопку назад
-    //1. Нажатие на иконку работает
-    //2. Реализован переход на activity_news
-    // ***Реализовать в соотвесви с ТЗ
-    private void onClickBtnBackMap(){
+        //нажатие на кнопку назад
+        //1. Нажатие на иконку работает
+        //2. Реализован переход на activity_news
+        // ***Реализовать в соотвесви с ТЗ
         binding.btnBackMap.setOnClickListener(v -> openActivityNews());
+
     }
+
 
 
 
