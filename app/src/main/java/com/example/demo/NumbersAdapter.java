@@ -55,9 +55,9 @@ public class NumbersAdapter extends RecyclerView.Adapter<NumbersAdapter.NumberVi
         public NumberViewHolder(@NonNull View itemView) {
             super(itemView);
 
-            fresh_news_image = itemView.findViewById(R.id.fresh_news_image);
-            fresh_news_date = itemView.findViewById(R.id.fresh_news_date);
-            fresh_news_text = itemView.findViewById(R.id.fresh_news_text);
+            fresh_news_image = itemView.findViewById(R.id.fresh_news_image_item);
+            fresh_news_date = itemView.findViewById(R.id.fresh_news_date_item);
+            fresh_news_text = itemView.findViewById(R.id.fresh_news_text_item);
         }
     }
 
